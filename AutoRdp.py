@@ -82,9 +82,9 @@ if "__main__" == __name__:
     usernameVar = Tkinter.StringVar()
     passwdVar = Tkinter.StringVar()
     
-    ipVar.set(u'10.240.216.26')
-    usernameVar.set(u'zhangxd18')
-    passwdVar.set(u'CSTLuEFI2009')
+    ipVar.set(u'YourIp')
+    usernameVar.set(u'YourName')
+    passwdVar.set(u'YourPasswd')
     
     root.title('AutoRdp')
     #root.withdraw()
