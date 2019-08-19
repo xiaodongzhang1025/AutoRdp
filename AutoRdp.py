@@ -71,10 +71,11 @@ drivestoredirect:s:
     print len(passwd), passwd
     print len(passwd_encrypt), passwd_encrypt
     rdpStr = rdpStr + "full address:s:%s\r\nusername:s:%s\r\npassword 51:b:%s\r\n"%(ip, username, passwd_encrypt)
-    with open("AutoRdp.rdp","w") as f:
+    rdpFile = "%s+%s.rdp"%(ip, username)
+    with open(rdpFile,"w") as f:
         f.write(rdpStr)
     #os.system('start "RemoteConsole %s %s" mstsc  AutoRdp.rdp /v:%s'%(ip, username, ip))
-    os.system('start "RemoteConsole %s %s" mstsc  AutoRdp.rdp'%(ip, username))
+    os.system('start "RemoteConsole %s %s" mstsc  %s'%(ip, username, rdpFile))
     
 if "__main__" == __name__:
     root = Tkinter.Tk()
